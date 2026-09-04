@@ -28,6 +28,20 @@ scatter!(ax, 1:10, cumsum(randn(10)))
 fig
 ```
 
+## Screenshots
+
+To add a figure, open this file in the GitHub web editor and drag an image
+into the text area — GitHub uploads it and inserts the markdown — then replace
+one of the placeholders below.
+
+`theme_light()` + `theme_flexoki_light()`:
+
+<!-- ![Flexoki light](paste-image-url-here) -->
+
+`theme_dark()` + `theme_flexoki_dark()`:
+
+<!-- ![Flexoki dark](paste-image-url-here) -->
+
 ## API
 
 - `theme_flexoki_light()` / `theme_flexoki_dark()` — color-only `Theme`s.
