@@ -38,8 +38,12 @@ using FlexokiMakieThemes
             end
         end
 
-        # composes with style themes
-        merged = merge(theme_minimal(), light)
+        # composes with style themes: in Makie's merge the first theme wins,
+        # so Flexoki supplies colors while the style theme fills the gaps
+        merged = merge(dark, theme_dark())
         @test merged isa Makie.Theme
+        @test merged.palette.color[] == dark.palette.color[]
+        @test merged.backgroundcolor[] == dark.backgroundcolor[]
+        @test merged.Axis.leftspinevisible[] == false
     end
 end

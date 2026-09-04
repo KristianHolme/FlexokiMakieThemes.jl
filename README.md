@@ -19,9 +19,10 @@ Pkg.add("FlexokiMakieThemes")
 using Makie
 using FlexokiMakieThemes
 
-# Flexoki colors on top of your preferred style theme
-set_theme!(merge(theme_light(), theme_flexoki_light()))
-set_theme!(merge(theme_dark(),  theme_flexoki_dark()))
+# Flexoki colors first — in Makie's merge the first theme wins — then the
+# style theme supplies the remaining chrome
+set_theme!(merge(theme_flexoki_light(), theme_light()))
+set_theme!(merge(theme_flexoki_dark(),  theme_dark()))
 
 fig, ax, _ = lines(1:10, cumsum(randn(10)))
 scatter!(ax, 1:10, cumsum(randn(10)))
@@ -34,11 +35,11 @@ To add a figure, open this file in the GitHub web editor and drag an image
 into the text area — GitHub uploads it and inserts the markdown — then replace
 one of the placeholders below.
 
-`theme_light()` + `theme_flexoki_light()`:
+`theme_flexoki_light()` + `theme_light()`:
 
 <!-- ![Flexoki light](paste-image-url-here) -->
 
-`theme_dark()` + `theme_flexoki_dark()`:
+`theme_flexoki_dark()` + `theme_dark()`:
 
 <!-- ![Flexoki dark](paste-image-url-here) -->
 

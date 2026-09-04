@@ -3,10 +3,11 @@
 # https://github.com/kepano/flexoki — see LICENSE-Flexoki.
 # Light accents use the 600 ramp; dark accents use the 400 ramp.
 #
-# These themes set colors only (no chrome: no spines, ticks, grids, or frames),
-# so they compose with any Makie style theme, e.g.
-#   set_theme!(merge(theme_light(), theme_flexoki_light()))
-#   set_theme!(merge(theme_dark(), theme_flexoki_dark()))
+# These themes set colors (including spine, tick, grid, and frame colors) but
+# no structural chrome, so they compose with any Makie style theme. In Makie's
+# merge the first theme wins, so put Flexoki first, e.g.
+#   set_theme!(merge(theme_flexoki_light(), theme_light()))
+#   set_theme!(merge(theme_flexoki_dark(), theme_dark()))
 
 module FlexokiMakieThemes
 
