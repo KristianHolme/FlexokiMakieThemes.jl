@@ -1,5 +1,8 @@
 # FlexokiMakieThemes.jl
 
+[![CI](https://github.com/KristianHolme/FlexokiMakieThemes.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/KristianHolme/FlexokiMakieThemes.jl/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/KristianHolme/FlexokiMakieThemes.jl/graph/badge.svg)](https://codecov.io/gh/KristianHolme/FlexokiMakieThemes.jl)
+
 [Flexoki](https://stephango.com/flexoki) color themes for [Makie.jl](https://docs.makie.org/stable/).
 
 Color-only by design: these themes set colors (background, text, lines, palette,
