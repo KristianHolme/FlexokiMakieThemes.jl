@@ -14,7 +14,7 @@ fonts — to whichever Makie style theme you choose.
 These themes use the Flexoki UI palette. They are **not** scientifically
 designed perceptual color schemes — they are not optimized for perceptual
 uniformity, equal lightness steps, colorblind-safe sequential mapping, or
-similar criteria in the [ColorSchemes.jl](https://github.com/JuliaPlots/ColorSchemes.jl) / scientific visualization sense.
+similar criteria in the [ColorSchemes.jl](https://github.com/JuliaGraphics/ColorSchemes.jl) / scientific visualization sense.
 
 They are intended so figures can match a Flexoki-themed desktop, editor, or
 terminal. They are **not recommended for publication figures** where a
