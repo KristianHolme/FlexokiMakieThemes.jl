@@ -34,4 +34,6 @@ fig
 
 ## License
 
-MIT. Flexoki palette by Steph Ango, also MIT.
+This package is MIT licensed (see `LICENSE`). The Flexoki palette is
+copyright (c) 2023 Steph Ango and used under the MIT license — see
+`LICENSE-Flexoki` (https://github.com/kepano/flexoki).

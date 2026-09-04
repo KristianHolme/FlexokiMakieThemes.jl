@@ -1,5 +1,6 @@
 # Flexoki color themes for Makie.
-# Colors from https://stephango.com/flexoki (MIT, Steph Ango).
+# Flexoki palette copyright (c) 2023 Steph Ango, MIT license:
+# https://github.com/kepano/flexoki — see LICENSE-Flexoki.
 # Light accents use the 600 ramp; dark accents use the 400 ramp.
 #
 # These themes set colors only (no chrome: no spines, ticks, grids, or frames),
