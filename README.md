@@ -9,6 +9,17 @@ Color-only by design: these themes set colors (background, text, lines, palette,
 colormap, 3D lighting) and leave all chrome — spines, ticks, grids, frames,
 fonts — to whichever Makie style theme you choose.
 
+## Intended use
+
+These themes use the Flexoki UI palette. They are **not** scientifically
+designed perceptual color schemes — they are not optimized for perceptual
+uniformity, equal lightness steps, colorblind-safe sequential mapping, or
+similar criteria in the [ColorSchemes.jl](https://github.com/JuliaPlots/ColorSchemes.jl) / scientific visualization sense.
+
+They are intended so figures can match a Flexoki-themed desktop, editor, or
+terminal. They are **not recommended for publication figures** where a
+purpose-built scientific colormap or palette is more appropriate.
+
 ## Installation
 
 ```julia
