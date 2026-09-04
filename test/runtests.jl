@@ -21,9 +21,21 @@ using FlexokiMakieThemes
         @test light isa Makie.Theme
         @test dark isa Makie.Theme
 
-        # color-only: no chrome/furniture keys
+        # color-only: attribute blocks hold colors, not structural chrome
+        chrome = (
+            :xgridvisible, :ygridvisible, :zgridvisible, :leftspinevisible,
+            :rightspinevisible, :bottomspinevisible, :topspinevisible,
+            :xspinesvisible, :yspinesvisible, :zspinesvisible, :xticksvisible,
+            :yticksvisible, :zticksvisible, :ticksvisible, :spinewidth,
+            :framevisible, :framewidth, :padding, :xticksize, :yticksize,
+            :xminorticksize, :yminorticksize, :xtickalign, :ytickalign,
+            :xminortickalign, :yminortickalign, :xminorticks, :yminorticks,
+            :xlabelpadding, :ylabelpadding, :ticklabelsize, :ticklabelpad,
+        )
         for t in (light, dark)
-            @test isempty(intersect(keys(t), (:Axis, :Legend, :Axis3, :Colorbar)))
+            for k in (:Axis, :Legend, :Colorbar, :Axis3)
+                @test isempty(intersect(keys(t[k]), chrome))
+            end
         end
 
         # composes with style themes

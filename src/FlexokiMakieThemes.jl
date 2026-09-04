@@ -49,11 +49,15 @@ end
     theme_flexoki(tokens)
 
 Build a color-only Makie `Theme` from Flexoki semantic tokens. Sets
-`backgroundcolor`, `textcolor`, `linecolor`, `palette`, `colormap`, and the
-3D lighting colors `ambient`/`light_color`. No chrome is applied, so the
-result composes with any style theme.
+background, text, line, palette, colormap, and 3D lighting colors, plus the
+color of axis borders/spines, ticks, grids, and legend/colorbar frames. No
+structural chrome (visibility, widths, paddings, tick sizes, etc.) is
+applied, so the result composes with any style theme.
 """
 function theme_flexoki(tokens)
+    ui3 = tokens.ui3
+    tx2 = tokens.tx2
+    grid = tokens.grid
     return Theme(
         backgroundcolor = tokens.bg,
         textcolor = tokens.tx,
@@ -62,6 +66,51 @@ function theme_flexoki(tokens)
         colormap = tokens.colormap,
         ambient = tokens.ambient,
         light_color = tokens.light_color,
+        Axis = (
+            backgroundcolor = tokens.bg,
+            xgridcolor = grid,
+            ygridcolor = grid,
+            leftspinecolor = ui3,
+            rightspinecolor = ui3,
+            bottomspinecolor = ui3,
+            topspinecolor = ui3,
+            xtickcolor = tx2,
+            ytickcolor = tx2,
+            xminortickcolor = tx2,
+            yminortickcolor = tx2,
+        ),
+        Legend = (
+            backgroundcolor = tokens.bg,
+            framecolor = ui3,
+        ),
+        Colorbar = (
+            backgroundcolor = tokens.bg,
+            topspinecolor = ui3,
+            bottomspinecolor = ui3,
+            leftspinecolor = ui3,
+            rightspinecolor = ui3,
+            tickcolor = tx2,
+        ),
+        Axis3 = (
+            xgridcolor = grid,
+            ygridcolor = grid,
+            zgridcolor = grid,
+            xspinecolor_1 = ui3,
+            yspinecolor_1 = ui3,
+            zspinecolor_1 = ui3,
+            xspinecolor_2 = ui3,
+            yspinecolor_2 = ui3,
+            zspinecolor_2 = ui3,
+            xspinecolor_3 = ui3,
+            yspinecolor_3 = ui3,
+            zspinecolor_3 = ui3,
+            xspinecolor_4 = ui3,
+            yspinecolor_4 = ui3,
+            zspinecolor_4 = ui3,
+            xtickcolor = tx2,
+            ytickcolor = tx2,
+            ztickcolor = tx2,
+        ),
     )
 end
 
@@ -265,6 +314,7 @@ function flexoki_tokens(mode::Symbol)
             tx = FLEXOKI_BLACK,
             tx2 = FLEXOKI_BASE[600],
             tx3 = FLEXOKI_BASE[300],
+            grid = (FLEXOKI_BASE[300], 0.45),
             accents = FLEXOKI_ACCENTS_LIGHT,
             colormap = flexoki_sequential(reverse(FLEXOKI_SEQUENTIAL_STOPS)),
             ambient = RGBf(0.48, 0.46, 0.42),
@@ -280,6 +330,7 @@ function flexoki_tokens(mode::Symbol)
             tx = FLEXOKI_BASE[200],
             tx2 = FLEXOKI_BASE[500],
             tx3 = FLEXOKI_BASE[700],
+            grid = (FLEXOKI_BASE[200], 0.12),
             accents = FLEXOKI_ACCENTS_DARK,
             colormap = flexoki_sequential(FLEXOKI_SEQUENTIAL_STOPS),
             ambient = RGBf(0.42, 0.40, 0.36),
