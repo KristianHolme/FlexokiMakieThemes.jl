@@ -32,9 +32,6 @@ fig
 
 - `theme_flexoki_light()` / `theme_flexoki_dark()` — color-only `Theme`s.
 
-The lower-level `FlexokiMakieThemes.theme_flexoki(tokens)` and
-`FlexokiMakieThemes.flexoki_tokens(mode)` are available but not exported.
-
 ## License
 
 MIT. Flexoki palette by Steph Ango, also MIT.
