@@ -31,8 +31,9 @@ fig
 ## API
 
 - `theme_flexoki_light()` / `theme_flexoki_dark()` — color-only `Theme`s.
-- `theme_flexoki(tokens)` — build a theme from a token `NamedTuple` (advanced).
-- `flexoki_tokens(mode)` — the semantic color tokens for `:light` / `:dark`.
+
+The lower-level `FlexokiMakieThemes.theme_flexoki(tokens)` and
+`FlexokiMakieThemes.flexoki_tokens(mode)` are available but not exported.
 
 ## License
 

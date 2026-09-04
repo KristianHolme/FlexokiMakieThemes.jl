@@ -11,7 +11,7 @@ module FlexokiMakieThemes
 
 using Makie
 
-export theme_flexoki, theme_flexoki_light, theme_flexoki_dark, flexoki_tokens
+export theme_flexoki_light, theme_flexoki_dark
 
 ##
 # utilities
