@@ -31,17 +31,15 @@ fig
 
 ## Screenshots
 
-To add a figure, open this file in the GitHub web editor and drag an image
-into the text area — GitHub uploads it and inserts the markdown — then replace
-one of the placeholders below.
+`theme_flexoki_light()`:
 
-`theme_flexoki_light()` + `theme_light()`:
+<img width="2400" height="1600" alt="flexoki_light" src="https://github.com/user-attachments/assets/9000a9b7-d141-4a3d-ae5d-a60f3b87613f" />
 
-<!-- ![Flexoki light](paste-image-url-here) -->
 
-`theme_flexoki_dark()` + `theme_dark()`:
+`theme_flexoki_dark()`:
 
-<!-- ![Flexoki dark](paste-image-url-here) -->
+<img width="2400" height="1600" alt="flexoki_dark" src="https://github.com/user-attachments/assets/0d7e5b87-7e9e-4348-a578-bffa11ee2e85" />
+
 
 ## API
 
