@@ -8,6 +8,8 @@
 # merge the first theme wins, so put Flexoki first, e.g.
 #   set_theme!(merge(theme_flexoki_light(), theme_light()))
 #   set_theme!(merge(theme_flexoki_dark(), theme_dark()))
+#
+# For matching Flexoki-themed UIs, not scientific visualization color standards.
 
 module FlexokiMakieThemes
 
